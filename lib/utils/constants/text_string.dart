@@ -1,0 +1,3 @@
+class DRydesTexts {
+  // OnBouarding Text
+}
