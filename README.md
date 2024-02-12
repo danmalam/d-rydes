@@ -1,6 +1,7 @@
-# d_rydes
+# d-rydes
 
-Driver and Passinger App
+Driver and Passengers App
+Created by Dopals Technologies
 
 ## Getting Started
 
