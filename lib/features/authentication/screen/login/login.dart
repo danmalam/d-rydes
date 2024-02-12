@@ -64,7 +64,7 @@ class Login extends StatelessWidget {
                           child: const Text(
                             "Recover Password?",
                             style: TextStyle(
-                                color: Colors.black,
+                                color: Colors.grey,
                                 fontWeight: FontWeight.w400),
                           ))
                     ],
