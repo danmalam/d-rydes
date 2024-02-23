@@ -14,13 +14,13 @@ class DRydesTextfieldTheme {
           .copyWith(fontSize: 14, color: Colors.black.withOpacity(0.8)),
       border: const OutlineInputBorder().copyWith(
           borderRadius: BorderRadius.circular(14),
-          borderSide: const BorderSide(width: 1, color: Colors.black)),
+          borderSide: const BorderSide(width: 1, color: Colors.white)),
       enabledBorder: const OutlineInputBorder().copyWith(
           borderRadius: BorderRadius.circular(14),
-          borderSide: const BorderSide(width: 1, color: Colors.black)),
+          borderSide: const BorderSide(width: 1, color: Colors.white)),
       focusedBorder: const OutlineInputBorder().copyWith(
           borderRadius: BorderRadius.circular(14),
-          borderSide: const BorderSide(width: 1, color: Colors.black)),
+          borderSide: const BorderSide(width: 1, color: Colors.white)),
       errorBorder: const OutlineInputBorder().copyWith(
           borderRadius: BorderRadius.circular(14),
           borderSide: const BorderSide(width: 1, color: Colors.red)),
