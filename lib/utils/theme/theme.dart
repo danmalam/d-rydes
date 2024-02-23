@@ -17,7 +17,7 @@ class DRydesTheme {
       fontFamily: 'Poppins',
       brightness: Brightness.light,
       primaryColor: DRydesColors.primary,
-      scaffoldBackgroundColor: Colors.white,
+      scaffoldBackgroundColor: const Color(0xFFF4F6F7),
       textTheme: DRydesTextTheme.lightTextTheme,
       chipTheme: DRydesChipTheme.lightChipTheme,
       appBarTheme: DRydesAppBarTheme.lightAppBarTheme,

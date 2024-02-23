@@ -41,13 +41,20 @@ class Login extends StatelessWidget {
                 children: [
                   const TextField(
                     decoration: InputDecoration(
-                        prefixIcon: Icon(Iconsax.user), labelText: "Email"),
+                        prefixIcon: Icon(Iconsax.user),
+                        labelText: "Email",
+                        filled: true,
+                        //<-- SEE HERE
+                        fillColor: Colors.white),
                   ),
                   const SizedBox(
                     height: DRydesSize.spaceBtInputField,
                   ),
                   const TextField(
                     decoration: InputDecoration(
+                      filled: true,
+                      //<-- SEE HERE
+                      fillColor: Colors.white,
                       prefixIcon: Icon(Iconsax.lock),
                       labelText: "Password",
                       suffixIcon: Icon(Iconsax.eye_slash),
