@@ -8,10 +8,10 @@ class DRydesElevatedButton {
       style: ElevatedButton.styleFrom(
           elevation: 0,
           foregroundColor: Colors.white,
-          backgroundColor: Color(0xFF211C6A),
+          backgroundColor: DRydesColors.primary,
           disabledForegroundColor: Colors.grey,
           disabledBackgroundColor: Colors.grey,
-          side: const BorderSide(color: Colors.blue),
+          // side: const BorderSide(color: DRydesColors.white),
           padding: const EdgeInsets.symmetric(vertical: 18),
           textStyle: const TextStyle(
               fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),
@@ -24,7 +24,7 @@ class DRydesElevatedButton {
           backgroundColor: DRydesColors.primary,
           disabledForegroundColor: Colors.grey,
           disabledBackgroundColor: Colors.grey,
-          side: const BorderSide(color: Colors.blue),
+          // side: const BorderSide(color: DRydesColors.white),
           padding: const EdgeInsets.symmetric(vertical: 18),
           textStyle: const TextStyle(
               fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),

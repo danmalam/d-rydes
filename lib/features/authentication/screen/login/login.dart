@@ -1,3 +1,4 @@
+import 'package:d_rydes/features/authentication/screen/forgot_password/forgot_password.dart';
 import 'package:d_rydes/features/authentication/screen/signup/signup.dart';
 import 'package:d_rydes/utils/constants/colors.dart';
 import 'package:d_rydes/utils/constants/image_string.dart';
@@ -41,24 +42,28 @@ class Login extends StatelessWidget {
                 children: [
                   const TextField(
                     decoration: InputDecoration(
-                        prefixIcon: Icon(Iconsax.user),
+                        prefixIcon: Icon(Iconsax.direct_right, color: DRydesColors.primary),
                         labelText: "Email",
                         filled: true,
                         //<-- SEE HERE
                         fillColor: Colors.white),
+                    style: TextStyle(color: Colors.black),
                   ),
                   const SizedBox(
                     height: DRydesSize.spaceBtInputField,
                   ),
                   const TextField(
+                    obscureText: true,
                     decoration: InputDecoration(
+
                       filled: true,
                       //<-- SEE HERE
                       fillColor: Colors.white,
-                      prefixIcon: Icon(Iconsax.lock),
+                      prefixIcon: Icon(Iconsax.key, color: DRydesColors.primary,),
                       labelText: "Password",
-                      suffixIcon: Icon(Iconsax.eye_slash),
+                      suffixIcon: Icon(Iconsax.eye_slash, color: DRydesColors.primary,),
                     ),
+                    style: TextStyle(color: Colors.black)
                   ),
                   const SizedBox(
                     height: DRydesSize.spaceBtInputField / 2,
@@ -67,7 +72,7 @@ class Login extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () => Get.to(() => const ForgotPasswordScreen()),
                           child: const Text(
                             "Recover Password?",
                             style: TextStyle(
@@ -90,7 +95,7 @@ class Login extends StatelessWidget {
               children: [
                 const Flexible(
                     child: Divider(
-                        color: DRydesColors.grey,
+                        color: DRydesColors.primary,
                         thickness: 0.8,
                         indent: 10,
                         endIndent: 5)),
@@ -100,7 +105,7 @@ class Login extends StatelessWidget {
                 ),
                 const Flexible(
                     child: Divider(
-                        color: DRydesColors.grey,
+                        color: DRydesColors.primary,
                         thickness: 0.8,
                         indent: 5,
                         endIndent: 10)),
@@ -114,8 +119,17 @@ class Login extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                      border: Border.all(color: DRydesColors.grey),
-                      borderRadius: BorderRadius.circular(10)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.4),
+                          spreadRadius: 2,
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
+                      color: Colors.white,
+                      border: Border.all(color: DRydesColors.white),
+                      borderRadius: BorderRadius.circular(12)),
                   child: IconButton(
                     onPressed: () {},
                     icon: const Image(
@@ -125,12 +139,21 @@ class Login extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  width: DRydesSize.spaceBtItem,
+                  width: DRydesSize.spaceBtItem +5,
                 ),
                 Container(
                   decoration: BoxDecoration(
-                      border: Border.all(color: DRydesColors.grey),
-                      borderRadius: BorderRadius.circular(10)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.4),
+                          spreadRadius: 2,
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
+                      color: Colors.white,
+                      border: Border.all(color: DRydesColors.white),
+                      borderRadius: BorderRadius.circular(12)),
                   child: IconButton(
                     onPressed: () {},
                     icon: const Image(
@@ -140,12 +163,21 @@ class Login extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  width: DRydesSize.spaceBtItem,
+                  width: DRydesSize.spaceBtItem +5,
                 ),
                 Container(
                   decoration: BoxDecoration(
-                      border: Border.all(color: DRydesColors.grey),
-                      borderRadius: BorderRadius.circular(10)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.4),
+                          spreadRadius: 2,
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
+                      color: Colors.white,
+                      border: Border.all(color: DRydesColors.white),
+                      borderRadius: BorderRadius.circular(12)),
                   child: IconButton(
                     onPressed: () {},
                     icon: const Image(
@@ -165,14 +197,10 @@ class Login extends StatelessWidget {
               children: [
                 const Text("New to Handouts?"),
                 TextButton(
-                    onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SignUpScreen()),
-                        ),
+                    onPressed: () => Get.to(() => const SignUpScreen()),
                     child: const Text("Create Account!",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.black)))
+                            fontWeight: FontWeight.bold, color: DRydesColors.primary)))
               ],
             )
           ],

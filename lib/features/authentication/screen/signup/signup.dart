@@ -42,14 +42,23 @@ class SignUpScreen extends StatelessWidget {
                 children: [
                   const TextField(
                     decoration: InputDecoration(
-                        prefixIcon: Icon(Iconsax.user), labelText: "Username"),
+                        prefixIcon: Icon(Iconsax.direct_right),
+                        labelText: "Email",
+                        filled: true,
+                        //<-- SEE HERE
+                        fillColor: Colors.white),
                   ),
                   const SizedBox(
                     height: DRydesSize.spaceBtInputField,
                   ),
                   const TextField(
+                    obscureText: true,
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Iconsax.lock),
+
+                      filled: true,
+                      //<-- SEE HERE
+                      fillColor: Colors.white,
+                      prefixIcon: Icon(Iconsax.key),
                       labelText: "Password",
                       suffixIcon: Icon(Iconsax.eye_slash),
                     ),
@@ -58,8 +67,13 @@ class SignUpScreen extends StatelessWidget {
                     height: DRydesSize.spaceBtInputField,
                   ),
                   const TextField(
+                    obscureText: true,
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Iconsax.lock),
+
+                      filled: true,
+                      //<-- SEE HERE
+                      fillColor: Colors.white,
+                      prefixIcon: Icon(Iconsax.key1),
                       labelText: "Confirm Password",
                       suffixIcon: Icon(Iconsax.eye_slash),
                     ),
@@ -106,8 +120,17 @@ class SignUpScreen extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                      border: Border.all(color: DRydesColors.grey),
-                      borderRadius: BorderRadius.circular(10)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.4),
+                          spreadRadius: 2,
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
+                      color: Colors.white,
+                      border: Border.all(color: DRydesColors.white),
+                      borderRadius: BorderRadius.circular(12)),
                   child: IconButton(
                     onPressed: () {},
                     icon: const Image(
@@ -121,8 +144,17 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                      border: Border.all(color: DRydesColors.grey),
-                      borderRadius: BorderRadius.circular(10)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.4),
+                          spreadRadius: 2,
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
+                      color: Colors.white,
+                      border: Border.all(color: DRydesColors.white),
+                      borderRadius: BorderRadius.circular(12)),
                   child: IconButton(
                     onPressed: () {},
                     icon: const Image(
@@ -136,8 +168,17 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                      border: Border.all(color: DRydesColors.grey),
-                      borderRadius: BorderRadius.circular(10)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.4),
+                          spreadRadius: 2,
+                          blurRadius: 3,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
+                      color: Colors.white,
+                      border: Border.all(color: DRydesColors.white),
+                      borderRadius: BorderRadius.circular(12)),
                   child: IconButton(
                     onPressed: () {},
                     icon: const Image(
@@ -157,14 +198,10 @@ class SignUpScreen extends StatelessWidget {
               children: [
                 const Text("Already have an account?"),
                 TextButton(
-                    onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Login()),
-                        ),
+                    onPressed: ()  => Get.to(() => const Login()),
                     child: const Text("Sign In here!",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.black)))
+                            fontWeight: FontWeight.bold, color: DRydesColors.primary)))
               ],
             )
           ],

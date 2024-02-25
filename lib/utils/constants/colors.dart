@@ -4,7 +4,8 @@ class DRydesColors {
   DRydesColors._();
 
   // App basic color
-  static const Color primary = Color(0xFF211C6A);
+  // static const Color primary = Color(0xFF211C6A);
+  static const Color primary = Color(0xFFFB8B24);
   static const Color secondary = Color(0XFFFFE24B);
   static const Color accent = Color(0xFFB0C7FF);
 
